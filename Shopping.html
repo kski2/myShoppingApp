@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shopping App</title>
+		<script>
+			function addItem() {
+			var newItem = document.createElement("div");
+			newItem.innerHTML = document.getElementById("box").value;
+			document.getElementById("list").appendChild(newItem);
+			}
+		</script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="shoppingCSS.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<h1 class="niceFont" style="font-size:48pt; color:white;">My Shopping List</h1>
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<input type="text" id="box" class="form-control" />
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row">&nbsp;</div>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<button onclick="addItem();" class="btn btn-danger" style="font-family:optima">Add Item</button>
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+		<div class="row">&nbsp;</div>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<div id="list"></div>
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+	</body>
+</html>
