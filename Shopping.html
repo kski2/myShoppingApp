@@ -7,7 +7,31 @@
 			var newItem = document.createElement("div");
 			newItem.innerHTML = document.getElementById("box").value;
 			document.getElementById("list").appendChild(newItem);
+		}
+		function checkbox() {
+            var myDiv = document.getElementById("checkboxList");
+
+            // creating checkbox element
+            var checkbox = document.createElement('input');
+
+            // Assigning the attributes
+            // to created checkbox
+            checkbox.type = "checkbox";
+            checkbox.name = "name";
+            checkbox.value = "value";
+            checkbox.id = "cBox";
+
+            // appending the checkbox
+            // and label to div
+            myDiv.appendChild(checkbox);
+
 			}
+
+			function boxClass() {
+					var element = document.getElementById("cBox");
+					element.classList.add("container");
+			}
+
 		</script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="shoppingCSS.css">
@@ -33,17 +57,20 @@
 		<div class="row">
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
-				<button onclick="addItem();" class="btn btn-danger" style="font-family:optima">Add Item</button>
+				<button onclick="addItem(); checkbox(); boxClass();" class="btn btn-danger" style="font-family:optima">Add Item</button>
 			</div>
 			<div class="col-sm-4"></div>
 		</div>
 		<div class="row">&nbsp;</div>
 		<div class="row">
-			<div class="col-sm-4"></div>
-			<div class="col-sm-4">
-				<div id="list"></div>
+			<div class="col-sm-3"></div>
+			<div class="col-sm-3">
+				<div id="list" class="niceFont" style="font-size:28pt; color:white;"></div>
 			</div>
-			<div class="col-sm-4"></div>
+			<div class="col-sm-3">
+					<div id="checkboxList"></div>
+			</div>
+			<div class="col-sm-3"></div>
 		</div>
 	</body>
 </html>
